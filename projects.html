@@ -1,68 +1,51 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <script src="assets/js/main.js" defer></script>
-  <title>Maleeha Sheikh — Portfolio</title>
-
-  <!-- SEO/Social -->
-  <meta name="description" content="Maleeha Sheikh — Data Analyst & HCI Researcher. Portfolio, projects, and publications.">
-  <meta name="author" content="Maleeha Sheikh">
-  <meta property="og:title" content="Maleeha Sheikh — Portfolio">
-  <meta property="og:description" content="Projects, dashboards, and research in Data Analytics & HCI.">
-  <meta property="og:image" content="images/og-cover.jpg">
-  <meta property="og:type" content="website">
-
-  <!-- Fonts + Styles -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/custom.css" />
-  <script src="assets/js/main.js" defer></script>
-
-<title>Projects — Maleeha Sheikh</title>
-</head>
-<body>
-<header class="site-header">
-  <a href="index.html" class="logo">Maleeha</a>
-  <nav>
-    <a href="index.html" class="nav-link">Home</a>
-    <!-- <a href="about.html" class="nav-link">About</a> -->
-    <a href="experience.html" class="nav-link">Experience</a>
-    <a href="projects.html" class="nav-link">Projects</a>
-    <a href="contact.html" class="nav-link">Contact</a>
-    <a href="assets/Maleeha_Sheikh_Resume.pdf" class="nav-link" target="_blank" rel="noopener">Resume</a>
-  </nav>
-  <button id="themeToggle" aria-label="Toggle dark mode">🌓</button>
-</header>
-
-<main class="wrap">
-  <section class="section">
-    <h1>Projects</h1>
-    <div id="filters" class="filters">
-      <button class="button small" data-filter="all">All</button>
-      <button class="button small" data-filter="powerbi">Power BI</button>
-      <button class="button small" data-filter="python">Python</button>
-      <button class="button small" data-filter="research">Research</button>
+<!-- Tariffs Dashboard -->
+<article class="card" data-tags="powerbi python analytics">
+  <img src="images/projects/tariffs-dashboard.jpg" alt="Tariffs dashboard">
+  <div class="card-body">
+    <h3>US Tariffs Trends Dashboard (2025)</h3>
+    <p>Tariff changes by HS code, importer/exporter, and time with YoY deltas.</p>
+    <div class="tags"><span class="tag">Power BI</span><span class="tag">Python</span></div>
+    <div class="card-actions">
+      <a class="button small" href="case-tariffs.html">Case Study</a>
     </div>
+  </div>
+</article>
 
-    <div class="grid" id="projectGrid">
-      <article class="card" data-tags="powerbi python">
-        <img src="images/projects/tariffs-dashboard.jpg" alt="Tariffs Dashboard">
-        <div class="card-body">
-          <h3>US Tariffs Trends Dashboard (2025)</h3>
-          <p>Tariff shifts, product-level impacts, and country flows.</p>
-          <div class="tags"><span class="tag">Power BI</span><span class="tag">Python</span></div>
-          <div class="card-actions">
-            <a class="button small" href="#" target="_blank">Code</a>
-            <a class="button small" href="#" target="_blank">Live</a>
-            <a class="button small" href="case-tariffs.html">Case Study</a>
-          </div>
-        </div>
-      </article>
+<!-- IB Risk/Macro -->
+<article class="card" data-tags="powerbi sql analytics">
+  <img src="images/projects/ib-dashboard.jpg" alt="IB dashboard">
+  <div class="card-body">
+    <h3>Investment Banking Risk & Macro</h3>
+    <p>Rates, yield curves (3M/2Y/10Y), spreads, and stress monitors with alerts.</p>
+    <div class="tags"><span class="tag">Power BI</span><span class="tag">SQL</span></div>
+    <div class="card-actions">
+      <a class="button small" href="case-investment.html">Case Study</a>
     </div>
-  </section>
-</main>
-</body>
-</html>
+  </div>
+</article>
+
+<!-- MH Chatbot Research -->
+<article class="card" data-tags="research python nlp">
+  <img src="images/projects/mh-chatbots.jpg" alt="MH chatbot research">
+  <div class="card-body">
+    <h3>Mental Health Chatbots — Values & Language</h3>
+    <p>Human values & linguistic patterns across apps; implications for empathy.</p>
+    <div class="tags"><span class="tag">Research</span><span class="tag">Python</span></div>
+    <div class="card-actions">
+      <a class="button small" href="case-mhchatbots.html">Case Study</a>
+    </div>
+  </div>
+</article>
+
+<!-- SuperAnnotate QA Metrics -->
+<article class="card" data-tags="python analytics">
+  <img src="images/projects/sa-quality.jpg" alt="QA metrics">
+  <div class="card-body">
+    <h3>Annotation QA Metrics & Drift</h3>
+    <p>Designed data quality checks; reduced error rate; improved model stability.</p>
+    <div class="tags"><span class="tag">Python</span><span class="tag">Analytics</span></div>
+    <div class="card-actions">
+      <a class="button small" href="case-qa.html">Case Study</a>
+    </div>
+  </div>
+</article>

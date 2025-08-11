@@ -35,4 +35,41 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('nav .nav-link').forEach(a => {
     if (a.getAttribute('href') === path) a.classList.add('active');
   });
+
+  
+
+  // --- Typewriter for the hero H1 ---
+const el = document.getElementById('typeTarget');
+if (el) {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const text = el.getAttribute('data-text') || el.textContent.trim();
+
+  if (!prefersReduced) {
+    el.textContent = '';
+    el.setAttribute('aria-label', text);
+
+    const cursor = document.createElement('span');
+    cursor.className = 'type-cursor';
+    cursor.textContent = '│';
+    el.appendChild(cursor);
+
+    let i = 0;
+    const base = 45, jitter = 30;
+
+    (function typeNext() {
+      if (i < text.length) {
+        const ch = text.charAt(i++);
+        el.insertBefore(document.createTextNode(ch), cursor);
+        const extra = ch === ' ' ? 60 : (',.;—–'.includes(ch) ? 120 : 0);
+        setTimeout(typeNext, base + Math.random() * jitter + extra);
+      } else {
+        setTimeout(() => { cursor.style.opacity = 0.3; }, 1000);
+      }
+    })();
+  } else {
+    el.textContent = text;
+  }
+}
+
+  
 });

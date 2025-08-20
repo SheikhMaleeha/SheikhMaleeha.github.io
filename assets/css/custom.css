@@ -47,6 +47,39 @@ nav .nav-link.active{ color: var(--brand); font-weight:600; }
 .lede{font-size:1.1rem; color:var(--ink)}
 @media (max-width:900px){ .two-col{grid-template-columns:1fr} }
 
+
+/* Small side-by-side thumbnails (override) */
+.thumbs,
+.thumbs.small {                 /* applies to both .thumbs and .thumbs small */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;                     /* space between thumbnails */
+  margin-top: 8px;
+  justify-content: flex-start;
+}
+
+.thumbs img,
+.thumbs.small img {
+  width: 90px;                  /* make them small squares */
+  height: 90px;
+  object-fit: cover;            /* neat crop */
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: transform .15s ease;
+}
+
+.thumbs a:hover img { transform: translateY(-2px); }
+
+/* Even smaller option: add class 'tiny' to your thumbs container */
+.thumbs.tiny img { width: 72px; height: 72px; }
+
+/* Force exactly 2 per row (optional): add class 'two' to the container */
+.thumbs.two { display: grid; grid-template-columns: repeat(2, auto); gap: 8px; }
+.thumbs.two img { width: 100px; height: 100px; }  /* tweak size if needed */
+
+
+
 /* Typewriter cursor */
 .type-cursor {
   display:inline-block;

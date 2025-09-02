@@ -80,6 +80,7 @@ nav .nav-link.active{ color: var(--brand); font-weight:600; }
 
 
 
+
 /* Typewriter cursor */
 .type-cursor {
   display:inline-block;
@@ -93,3 +94,35 @@ nav .nav-link.active{ color: var(--brand); font-weight:600; }
 @media (prefers-reduced-motion: reduce) {
   .type-cursor { display:none; }
 }
+
+/* Certifications: responsive card grid */
+#certifications { scroll-margin-top: 80px; }
+
+.cert-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;                        /* mobile: 1 per row */
+}
+
+@media (min-width: 720px) {
+  .cert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }  /* 2 per row */
+}
+
+@media (min-width: 1100px) {
+  .cert-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }  /* 3 per row on wide screens */
+}
+
+.cert-card {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cert-title { margin: 0; color: var(--ink); }
+.cert-meta  { font-size: .9rem; opacity: .85; }
+.cert-actions .button.small { margin-right: 6px; }
+
